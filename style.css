@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.heart {
+    position: fixed;
+    pointer-events: none;
+
+    font-size: 20px;
+
+    animation: heartAnimation 1s linear forwards;
+}
+
+@keyframes heartAnimation {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+        filter: hue-rotate(360deg);
+    }
+}
